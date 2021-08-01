@@ -10,8 +10,6 @@ seeder file already created. please run php artisan db:seed.
 - [Main Website](http://www.tubaglobal.com/).
 
 
-- [Main Website](https://agrostar.com.bd/).
-
 
 
 ## to run this project you have to follow this steps

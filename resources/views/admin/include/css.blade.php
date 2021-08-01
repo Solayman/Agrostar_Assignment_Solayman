@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Sidebar Dashboard Template</title>
+<title>Agrostar.com.bd</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">  
 <link rel="stylesheet"   href="{{asset('assets/admin_assets/font-awesome-4.7.0/css/font-awesome.css')}}">
 <!-- datatable -->
