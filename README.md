@@ -7,7 +7,7 @@ seeder file already created. please run php artisan db:seed.
 - password:12345678 <br/>
 - login url: 127.0.0.1:8000/login<br/>
 
-- [Main Website](http://www.tubaglobal.com/).
+- [Main Website](https://Agrostar.com.bd).
 
 
 
