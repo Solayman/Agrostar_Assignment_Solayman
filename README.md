@@ -2,7 +2,12 @@
 
 First you have to inport your sql file to your database. please import database file from db/agrostar.sql and configure .env file.otherwise this project will not run
 seeder file already created. please run php artisan db:seed.
+## credential of seeder file
+- email: admin@Agrostar.com.bd <br/>
+- password:12345678 <br/>
+- login url: 127.0.0.1:8000/login<br/>
 
+- [Main Website](http://www.tubaglobal.com/).
 
 
 - [Main Website](https://agrostar.com.bd/).
