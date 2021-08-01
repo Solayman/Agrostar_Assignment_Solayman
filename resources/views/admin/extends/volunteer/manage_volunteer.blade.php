@@ -25,7 +25,6 @@
 	<tbody>
 	</tbody>
 </table>
-
 @include('admin.extends.volunteer.update_form')
 @endsection
 @section('script')
@@ -86,7 +85,6 @@ cancelButtonColor: '#d33',
 confirmButtonText: 'Yes, delete it!'
 }).then((result) => {
 if (result.isConfirmed) {
-
 $.ajax({
 url: "delete_volunteer_api/" + dataId, //ajax execution to this url
 type: 'delete',
@@ -96,24 +94,20 @@ _token:'{{ csrf_token() }}'
 beforeSend: function () {
 },
 success: function (data) {
-setTimeout(function () { 
+setTimeout(function () {
 var oTable = $('#volunteer_table').dataTable();
 oTable.fnDraw(false); //reset datatable
 });
 }
 });
 Swal.fire(
-
-
 'Deleted!',
 'Your file has been deleted.',
 'success'
 )
 }
 })
-
 });
-
 // end delete Contact us --------------------------------
 // start contact us edit button update model
 $('body').on('click', '.edit-post', function () {
@@ -124,7 +118,6 @@ $.get('/Admin/single-volunteer-table-information/' + data_id, function (data) {
 	toggleTable();
 $('#Update_category_model_heading').html("Update Sub Category"); //this is title
 $('#update-user-btn').val("edit-post");
-
 $('#volunteer_id').val(data.volunteer_id);
 $('#name').val(data.name);
 $('#email').val(data.email);
@@ -177,18 +170,16 @@ title:'Validation failed'
 // volunteer photo update
 // table show hide
 function toggleTable() {
-  var x = document.getElementById("volunteer_table");
-   var form_model=document.getElementById('data-update-sector');
-  if (x.style.display === "none") {
-    x.style.display = "block";
-    form_model.style.display="block";
-    form_model.style.display="none";
-  } else { 
-    x.style.display = "none";
-    form_model.style.display="block";
-
-  }
+var x = document.getElementById("volunteer_table");
+var form_model=document.getElementById('data-update-sector');
+if (x.style.display === "none") {
+x.style.display = "block";
+form_model.style.display="block";
+form_model.style.display="none";
+} else {
+x.style.display = "none";
+form_model.style.display="block";
 }
-
+}
 </script>
 @endsection

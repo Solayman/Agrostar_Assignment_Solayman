@@ -28,9 +28,9 @@ $query->whereRaw("DATE_FORMAT(created_at,'%m/%d/%Y') like ?", ["%$keyword%"]);
 })
 
 ->addColumn('action', function($data){
-$button = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$data->volunteer_id.'" data-original-title="Edit" class="edit btn btn-success btn-sm edit-post"><i class="fa fa-pencil-square-o"></i></a>';
+$button = '<a style="color:green;" href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$data->volunteer_id.'" data-original-title="Edit" class="edit btn btn-success btn-sm edit-post"><i class="fas fa-edit"></i></a>';
 $button .= '&nbsp;&nbsp;';
-$button .= '<button name="delete" id="'.$data->volunteer_id.'" class="delete btn btn-danger confirmDelete" record="Area" recordid="{{$data->AreaID}}"><i class="fa fa-trash"></i></button>';
+$button .= '<button style="color:red; border:none;" name="delete" id="'.$data->volunteer_id.'" class="delete btn btn-danger confirmDelete" record="Area" recordid="{{$data->AreaID}}"><i style="color:red;" class="fa fa-trash"></i></button>';
 return $button;
 })
 ->rawColumns(['action'])
@@ -39,8 +39,11 @@ return $button;
 public function delete_volunteer_api($id){
 $select_volunteer_table=DB::table('volunteer')->where('volunteer_id','=',$id)->first();
 $volunteer_photo_path = './frontend_upload_asset/user/volunteer/';
+$volunteer_photo_name=$select_volunteer_table->photo;
+if($volunteer_photo_name!=null){
 if (file_exists($volunteer_photo_path . $select_volunteer_table->photo)) {
 unlink($volunteer_photo_path . $select_volunteer_table->photo);
+}
 }
 DB::table('volunteer')
 ->where('volunteer_id','=',$id)
@@ -62,7 +65,7 @@ public function store_volunteer (Request $request){
 'photo' => 'required',
 'nid_number' => 'required',
 ]);
-$volunteer_photo_name='photo.jpg';
+$volunteer_photo_name='';
 $volunteer_input_photo = $request->file('photo');
 $volunteer_photo_path = './frontend_upload_asset/user/volunteer/';
 if ($volunteer_input_photo) {
@@ -99,9 +102,12 @@ $volunteer_photo_name=$select_volunteer_table->photo;
 $volunteer_input_photo = $request->file('photo');
 $volunteer_photo_path = './frontend_upload_asset/user/volunteer/';
 if ($volunteer_input_photo) {
+if($volunteer_photo_name!=null){
 if (file_exists($volunteer_photo_path.$select_volunteer_table->photo)) {
 unlink($volunteer_photo_path.$select_volunteer_table->photo);
 }
+}
+
 $volunteer_photo_name = time() . '.' . $volunteer_input_photo->getClientOriginalExtension();
 $volunteer_input_photo->move($volunteer_photo_path, $volunteer_photo_name);
 }

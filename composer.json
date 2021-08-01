@@ -9,7 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3",
-        "barryvdh/laravel-dompdf": "^0.8.7",
+        
         "brian2694/laravel-toastr": "^5.54",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
@@ -18,9 +18,6 @@
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "3.0",
-        "mews/purifier": "^3.3",
-        "realrashid/sweet-alert": "^3.2",
-        "unisharp/laravel-filemanager": "^2.2",
         "yajra/laravel-datatables": "1.5"
     },
     "require-dev": {
@@ -68,6 +65,16 @@
       "@php artisan config:cache",
       "@php artisan optimize:clear",
       "composer dump-autoload"
+    ],
+
+      "setup": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+      "composer install",
+      "php artisan db:create",
+      "php artisan key:generate",
+      "php artisan migrate:fresh --seed",
+      "php artisan storage:link",
+      "php artisan serve"
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,

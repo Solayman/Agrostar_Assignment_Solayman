@@ -1,8 +1,11 @@
 ## About Tuba Project
 
-First you have to inport your sql file to your database. and configure .env file. otherwise this project will not run
+First you have to inport your sql file to your database. please import database file from db/agrostar.sql and configure .env file.otherwise this project will not run
+seeder file already created. please run php artisan db:seed.
 
-- [Main Website](http://www.tubaglobal.com/).
+
+
+- [Main Website](https://agrostar.com.bd/).
 
 
 
@@ -17,21 +20,9 @@ First you have to inport your sql file to your database. and configure .env file
 - php artisan cache:cache<br/>
 - php artisan config:cache<br/>
 - php artisan optimize:clear<br/>
-- composer dump-autoload
+- composer dump-autoload<br/>
+- php artisan db:seed
 ## to create migration files from database
 - php artisan help migrate:generate for help or <br/>
 - php artisan  migrate:generate to migrate<br/>
-
-## used to create this project, I have used those following packages
-- [Migration Generate](https://github.com/kitloong/laravel-migrations-generator).<br/>
-- [For Video Tutorial Migration Generate](https://www.youtube.com/watch?v=eLybI4WPuWc).<br/>
-- [Tinymce](https://www.tiny.cloud/).<br/>
-- [Unisharp File Manager](https://www.tiny.cloud/).<br/>
-- [Dom PDF Laravel](https://github.com/barryvdh/laravel-dompdf).<br/>
-- [Laravel Composer Toastr](https://github.com/brian2694/laravel-toastr).<br/>
-- [Intervention Image](http://image.intervention.io/).<br/>
-- [Mews/purifier](https://packagist.org/packages/mews/purifier).<br/>
-- [Sweet Alert](https://github.com/realrashid/sweet-alert).<br/>
-- [Sweet Alert](https://github.com/realrashid/sweet-alert).<br/>
-- [Yajrabox Laravel Databales](https://yajrabox.com/docs/laravel-datatables/master/installation).<br/>
 
