@@ -2,7 +2,7 @@
 <div class="sidebar">
     <center>
     <img src="{{asset('assets/images/logo.png')}}" class="profile_image" alt="">
-    <h4>Jessica</h4>
+    <h4>{{ Auth::user()->name }}</h4>
     </center>
     <a href="{{url('/home')}}"><i class="fa fa-home"></i><span>Dashboard</span></a>
     <a href="{{url('/Admin/volunteer')}}"><i class="fa fa-list"></i><span>List Volunteer</span></a>
