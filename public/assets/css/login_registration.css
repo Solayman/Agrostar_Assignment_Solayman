@@ -1,0 +1,101 @@
+.container{
+margin-left: 10px;
+margine-right: 10px;
+background-color: #FFFFFF;
+}
+/*login registration*/
+.login-section{
+bottom: 30%;
+width: 30%;
+margin: 0px auto;
+margin-top: 100px;
+background-color: #F7F7F7;
+padding: 50px;
+border: 1px solid black ;
+}
+/* Assign full width inputs*/
+input[type=text],
+input[type=password],
+input[type=email]
+ {
+width: 100%;
+padding: 12px 40px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+/* Set a style for the buttons*/
+button {
+background-color: black;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+}
+/* Set a hover effect for the button*/
+button:hover {
+opacity: 0.8;
+}
+.fontuser {
+position: relative;
+}
+.fontuser i{
+position: absolute;
+left: 15px;
+top: 40px;
+color: gray;
+}
+.fontpassword {
+position: relative;
+}
+.fontpassword i{
+position: absolute;
+left: 15px;
+top: 40px;
+
+color: gray;
+}
+.account-remember{
+font-size: 16px;
+font-weight: bold;
+color: black;
+}
+.account-remember a{
+color:  #d35400 ;
+text-decoration: none;
+}
+/*end login registration*/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.invalid-feedback{
+
+
+  font-weight: bold;
+  color: red;
+  margin-bottom: 50px;
+}
+
+.warning-message{
+font-weight: bold;
+  color: red;
+  margin-bottom: 50px;
+
+  
+}
