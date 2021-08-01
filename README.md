@@ -1,4 +1,4 @@
-## About Tuba Project
+## About ArgoStar Project
 
 First you have to inport your sql file to your database. please import database file from db/agrostar.sql and configure .env file.otherwise this project will not run
 seeder file already created. please run php artisan db:seed.
